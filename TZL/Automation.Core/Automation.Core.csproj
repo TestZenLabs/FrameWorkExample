@@ -58,6 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasePage.cs" />
+    <Compile Include="BaseTest.cs" />
+    <Compile Include="ChromeBrowser.cs" />
+    <Compile Include="ObjectRetrieval.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
