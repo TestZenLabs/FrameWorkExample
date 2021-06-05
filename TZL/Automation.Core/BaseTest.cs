@@ -11,24 +11,32 @@ namespace Automation.Core
     
     public class BaseTest
     {
-        protected IWebDriver Driver;
+        public IWebDriver Driver;
 
         #region Page
 
-        public T Page<T>(IWebDriver driver)
+        public T Page<T>(IWebDriver driver) where T: BasePage
         {
             Type pageType = typeof(T);
 
-            T ob = (T)Activator.CreateInstance(pageType, new object[] { driver });
+            if (pageType!=null)
+            {
+                T ob = (T)Activator.CreateInstance(pageType, new object[] { driver });
 
                 return ob;
+            }
+            else
+            {
+                return null;
+            }
+
+          
         }
 
         #endregion
 
         protected void LogMessage(string message, Action method)
         {
-            method();
             TestContext.Write($"step:{message}");
 
             try

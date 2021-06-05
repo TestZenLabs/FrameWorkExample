@@ -21,7 +21,7 @@ namespace Automation.Test.TestCases
 
                 var pgDemoChart = Page<DemoChart>(Driver);
 
-                LogMessage("Invoking SearchItems Method", ()
+                LogMessage("Invoking Search Items Method", () 
                     => pgDemoChart.SearchItems("IPhone", "Andriod"));
 
                 LogMessage("Close Browser", () => CloseBrowser(Driver));
@@ -41,12 +41,12 @@ namespace Automation.Test.TestCases
             {
                 LogMessage("Navigate To Url", ()
                     => NavigateToUrl("https://demostore.x-cart.com/", Driver));
+
                 var pgDemoChart = Page<DemoChart>(Driver);
 
-                //LogMessage("Invoking Hot Deals Method", ()
-                //    => pgDemoChart.HotDeals());
+                LogMessage("Invoking Search Items Method", () => pgDemoChart.HotDeals());
 
-                //LogMessage("Close Browser", () => CloseBrowser(Driver));
+                LogMessage("Close Browser", () => CloseBrowser(Driver));
             }
 
             catch (Exception)

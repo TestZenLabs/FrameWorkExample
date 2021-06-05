@@ -29,6 +29,10 @@ namespace Automation.Repository
 
         private IWebElement Sale => _driver.LinkText("Sale");
 
+        private IWebElement Iphone => _driver.LinkText("Search powered by CloudSearch");
+
+        private IWebElement Andriod => _driver.LinkText("Search powered by CloudSearch");
+
         #endregion
 
         #region TestCase Methods
@@ -38,13 +42,20 @@ namespace Automation.Repository
             LogMessage("Entering a Value into Search Items Text Box", ()
                 => Input(SearchTestItems, value1));
 
-            LogMessage("Entering a Value into Search Items Text Box", ()
+            LogMessage("Validating if Iphones are Visible", ()
+              => AssertIsTrue(Iphone.Displayed));
+
+          LogMessage("Entering a Value into Search Items Text Box", ()
              => ClearAndInput(SearchTestItems, value2));
+
+            LogMessage("Validating if Andriod are Visible", ()
+             => AssertIsTrue(Andriod.Displayed));
         }
 
         public void HotDeals()
         {
-            LogMessage("Mouse Hover On Hot Deals Text", () => MouseHover(HotDealsLink[1], _driver));
+            LogMessage("Mouse Hover On Hot Deals Text", () 
+                => MouseHover(HotDealsLink[1], _driver));
 
             LogMessage("Click On Sale Text", () => Click(Sale));
         }

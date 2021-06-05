@@ -23,12 +23,10 @@ namespace Automation.Core
                 }
 
                return _instance;
-            }
-     
+            }    
     }
 
-
-        public IWebDriver GetDriver()
+    public IWebDriver GetDriver()
         {
             ChromeOptions options = new ChromeOptions();
 

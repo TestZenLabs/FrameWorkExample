@@ -11,9 +11,8 @@ namespace Automation.Core
 {
     public class BasePage
     {
-        public void LogMessage(string message, Action method)
+        protected void LogMessage(string message, Action method)
         {
-            method();
             TestContext.Write($"step:{message}");
 
             try
@@ -31,12 +30,12 @@ namespace Automation.Core
 
         #region EnterText
 
-        public static void Input(IWebElement element, string data)
+        protected static void Input(IWebElement element, string data)
         {
             element.SendKeys(data);
         }
 
-        public static void ClearAndInput(IWebElement element, string data)
+        protected static void ClearAndInput(IWebElement element, string data)
         {
             element.Clear();
             element.SendKeys(data);
@@ -46,12 +45,12 @@ namespace Automation.Core
 
         #region ClickFunctions
 
-        public static void Click(IWebElement element)
+        protected static void Click(IWebElement element)
         {
             element.Click();
         }
 
-        public static void MoveToElementAndClick(IWebElement element, IWebDriver driver)
+        protected static void MoveToElementAndClick(IWebElement element, IWebDriver driver)
         {
             Actions action = new Actions(driver);
 
@@ -65,7 +64,7 @@ namespace Automation.Core
 
         #region MouseHover
 
-        public static void MouseHover(IWebElement element, IWebDriver driver)
+        protected static void MouseHover(IWebElement element, IWebDriver driver)
         {
             Actions action = new Actions(driver);
 
@@ -76,12 +75,12 @@ namespace Automation.Core
 
         #region Assert Functions
 
-        public static void AssertIsTrue(bool value)
+        protected static void AssertIsTrue(bool value)
         {
             Assert.IsTrue(value);
         }
 
-        public static void AssertAreEqual(Object actual,Object Expected)
+        protected static void AssertAreEqual(Object actual,Object Expected)
         {
             Assert.AreEqual(actual, Expected);
         }

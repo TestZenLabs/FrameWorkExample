@@ -12,7 +12,6 @@ C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\bin\Debug\WebDriver.Supp
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\bin\Debug\nunit.framework.xml
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\bin\Debug\WebDriver.xml
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\bin\Debug\WebDriver.Support.xml
-C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\obj\Debug\Automation.Core.csprojAssemblyReference.cache
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\obj\Debug\Automation.Core.csproj.CoreCompileInputs.cache
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\obj\Debug\Automation.Core.csproj.CopyComplete
 C:\Users\personel\Desktop\FrameWork\TZL\Automation.Core\obj\Debug\Automation.Core.dll
